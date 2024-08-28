@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html data-theme="light">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 3 </title>
+    
+    
+    <!-- tailwind css & DaisyUI Links -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font awesome CDN link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <!-- Google Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Italianno&family=Manrope:wght@200..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: 'rgb(171, 239, 95)',
+                        secondary: 'rgba(171, 239, 95, 0.5);',
+                        icon: 'rgb(115, 115, 115);',
+                        card1:'rgb(231, 193, 211);',
+                        card2:'rgb(239, 218, 110);',
+                        card3:'rgb(164, 218, 195)',
+                        card4:'rgb(119, 170, 234)',
+                        work:'rgb(244, 244, 244)',
+
+                        
+                    },
+                    fontFamily: {
+                        Poppins: 'Poppins',
+                    },
+                    backgroundImage: {
+                        background: "url('../B10-Assignment-03-main/assets/bg.jpg')",
+                        
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="font-Manrope">
+  <header class="bg-gradient-to-b from-slate-100 to-white">
+    <!-- nav start -->
+   
+      <nav class="navbar w-11/12 mx-auto">
+        <div class="navbar-start">
+          <div class="flex gap-5">
+            <i class="fa-solid fa-arrow-right -rotate-45 bg-primary p-2 rounded-2xl"></i>
+            <h1 class="text-4xl font-bold">Rinterio</h1>
+           </div> 
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1 flex items-center gap-2 text-lg font-light">
+                <li class="hover:text-primary transition-colors ease-in-out duration-300">
+                    <a href="#">Home</a>
+                </li>
+                <li class="hover:text-primary transition-colors ease-in-out duration-300">
+                    <a href="#">Everything</a>
+                </li>
+                <li class="hover:text-primary transition-colors ease-in-out duration-300">
+                    <a href="#">Groceries</a>
+                </li>
+                <li class="hover:text-primary transition-colors ease-in-out duration-300">
+                    <a href="#">About</a>
+                </li>
+                <li class="hover:text-primary transition-colors ease-in-out duration-300">
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <div class="navbar-end gap-2 items-center">
+            <div class="hidden lg:flex gap-2 text-lg ">
+                <!-- icon color -->
+                <button class="flex items-center gap-2 text-icon bg-white p-2 rounded-2xl font-light">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <button class="flex items-center gap-2 text-icon bg-white p-2 rounded-xl font-light">
+                    <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+              <div class="hidden lg:flex gap-2 p-2 bg-primary rounded-xl">
+            <h1 class="text-lg  font-bold ">Book Consult</h1>
+            <i class="fa-solid fa-arrow-right -rotate-45 bg-black text-white p-2 rounded-2xl"></i>
+
+              </div>
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden bg-primary text-lg">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <ul tabindex="0"
+                    class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 right-0 p-2 shadow text-lg font-medium gap-5">
+                    <li class="hover:text-primary transition-colors ease-in-out duration-300">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="hover:text-primary transition-colors ease-in-out duration-300">
+                        <a href="#">Everything</a>
+                    </li>
+                    <li class="hover:text-primary transition-colors ease-in-out duration-300">
+                        <a href="#">Groceries</a>
+                    </li>
+                    <li class="hover:text-primary transition-colors ease-in-out duration-300">
+                        <a href="#">About</a>
+                    </li>
+                    <li class="hover:text-primary transition-colors ease-in-out duration-300">
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- nav end -->
+   <div class="lg:w-8/12 mx-auto flex flex-col gap-7 pb-40">
+    <img src="../B10-Assignment-03-main/assets/banner.png" alt="">
+    <h1 class=" text-2xl lg:text-5xl font-bold text-center">A barn house of this design has a striking appearance</h1>
+    <p class="text-center sm:text-sm lg:text-base">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents, and large windows that flood the space with natural light.</p>
+   <div class="flex justify-center items-center"> 
+    <div class="flex gap-2 p-2 bg-secondary rounded-xl w-44 ">
+    <h1 class="text-lg  font-bold ">Book Consult</h1>
+    <i class="fa-solid fa-arrow-right -rotate-45 bg-primary text-white p-2 rounded-2xl"></i>
+
+</div>
+
+</div>
+   </div>
+   
+  </header>
+  <main>
+    <div class="bg-work pb-24 pt-5">
+ <div class="w-11/12 ">
+    <img class="border border-dashed ml-12 border-black hidden lg:block" src="../B10-Assignment-03-main/assets/Vector.png" alt="">
+    <div class="flex flex-col lg:flex-row  justify-center  gap-10">
+        
+        <div class="flex flex-col gap-4">
+    <div class="flex w-24 gap-1 justify-center items-center p-1 rounded-xl shadow bg-white text-xs ">
+        <i class="fa-solid fa-arrow-right"></i> 
+        <p class="">About Us</p>
+    </div>
+    <div class="">
+        <h1 class="text-3xl font-bold mb-2">We design thoughtful, <br> liveable spaces</h1>
+    <p>The barn house captivates with its blend of rustic charm and <br>
+        modern sophistication, featuring weathered wood, sleek metal accents.</p>
+    </div>
+    <!-- card -->
+     <div class="bg-white w-96 flex  gap-3 p-3 rounded shadow">
+    <img src="../B10-Assignment-03-main/assets/commercial.png" alt="">
+    <div>
+        <h4 class="text-xl font-semibold">Commercial</h4>
+        <p class="text-xs font-light">The barn house captivates with its blend of rustic charm and modern.</p>
+    </div>
+     </div>
+     <!-- card 2 -->
+     <div class="bg-white w-96 flex gap-3 p-3 rounded shadow">
+        <img class=" " src="../B10-Assignment-03-main/assets/residential.png" alt="">
+        <div>
+            <h4 class="text-xl font-semibold">Residential</h4>
+            <p class="text-xs font-light">The barn house captivates with its blend of rustic charm and modern.</p>
+        </div>
+         </div>
+         <!-- card close -->
+        </div>
+        <div class="w-96 rounded">
+            <img class="w-full" src="../B10-Assignment-03-main/assets/Rectangle.png" alt="">
+        </div>
+    </div>
+ </div> 
+   
+    <!--work process  -->
+   <div class="flex flex-col gap-3 justify-center items-center my-20">
+    <div class="flex w-28 gap-1 justify-center items-center p-1 rounded-xl shadow bg-white text-xs ">
+        <i class="fa-solid fa-arrow-right"></i> 
+        <p class="">How we works</p>
+    </div>
+    <h1 class="text-3xl font-bold">Our Works Process</h1>
+    <p class="text-center">The barn house captivates with its blend of rustic charm and modern sophistication, <br> featuring weathered wood, sleek metal accents.</p>
+   </div>
+<!-- card -->
+ <div class="flex flex-col lg:flex-row gap-6 justify-center items-center mx-auto w-11/12">
+    <!-- card1 -->
+  <div class=" bg-card1 p-3 rounded-xl shadow">
+    <img src="../B10-Assignment-03-main/assets/concept.png" alt="">
+    <h5 class="text-xl font-bold py-2">Concept</h5>
+    <p class=" pb-2">The barn house captivates with its blend of rustic charm and modern.</p>
+     </div>
+     <!-- card 2 -->
+     <div class=" bg-card2 p-3 rounded-xl shadow">
+       <img src="../B10-Assignment-03-main/assets/flow-chart.png" alt="">
+       <h5 class="text-xl font-bold py-2">Design Process</h5>
+       <p class=" pb-2">The barn house captivates with its blend of rustic charm and modern.</p>
+        </div>
+        <!-- card3 -->
+        <div class=" bg-card3 p-3 rounded-xl shadow">
+           <img src="../B10-Assignment-03-main/assets/vision.png" alt="">
+           <h5 class="text-xl font-bold py-2">Supervision</h5>
+           <p class=" pb-2">The barn house captivates with its blend of rustic charm and modern.</p>
+            </div>
+            <!-- card4 -->
+            <div class=" bg-card4 p-3 rounded-xl shadow">
+               <img src="../B10-Assignment-03-main/assets/budget-planning.png" alt="">
+               <h5 class="text-xl font-bold py-2">Budget Planning</h5>
+               <p class=" pb-2">The barn house captivates with its blend of rustic charm and modern.</p>
+                </div>
+ </div>
+
+   </div>
+<div>
+    <div class="flex flex-col gap-3 justify-center items-center my-20">
+        <div class="flex w-40 gap-1 justify-center items-center p-1 rounded-xl shadow bg-green-50 text-xs ">
+            <i class="fa-solid fa-arrow-right"></i> 
+            <p class="">Explore our Latest works</p>
+        </div>
+        <h1 class="text-3xl font-bold">Our Latest Portfolio</h1>
+        <p class="text-center">The barn house captivates with its blend of rustic charm and modern sophistication, <br> featuring weathered wood, sleek metal accents.</p>
+       </div>
+
+       <!-- card--2 -->
+       <div class=" w-11/12 mx-auto grid grid-cols-1 lg:grid-cols-5 gap-5">
+        <div class="lg:flex gap-4 p-5 bg-white border shadow-lg rounded-xl lg:col-span-3">
+            
+            <img src="../B10-Assignment-03-main/assets/img1.png" alt="">
+
+        <div>
+            <h1 class="text-2xl font-bold">Commercial</h1>
+            <p class="py-4">The barn house captivates with its blend of rustic charm and modern. The barn house captivates with its blend of rustic charm and modern .</p>
+            <div class="flex gap-2">
+                <i class="fa-solid fa-arrow-right -rotate-45 bg-primary p-2 rounded-2xl"></i>
+                <h1 class="text-2xl font-bold">Rinterio</h1>
+               </div> 
+        </div>
+    </div>
+        <div class="p-5 bg-white border shadow-lg rounded-xl lg:col-span-2 ">
+            <img class="w-full h-52" src="../B10-Assignment-03-main/assets/img2.png" alt="">
+         </div>
+         <div class="p-5 bg-white border shadow-lg rounded-xl ">
+            <img class="w-full h-52" src="../B10-Assignment-03-main/assets/img3.png" alt="">
+         </div>
+         <div class="lg:flex gap-4 p-5 bg-white border shadow-lg rounded-xl lg:col-span-3">
+            
+            <img src="../B10-Assignment-03-main/assets/img4.png" alt="">
+
+        <div>
+            <h1 class="text-2xl font-bold">Commercial</h1>
+            <p class="py-4">The barn house captivates with its blend of rustic charm and modern. </p>
+            <div class="flex gap-2">
+                <i class="fa-solid fa-arrow-right -rotate-45 bg-primary p-2 rounded-2xl"></i>
+                <h1 class="text-2xl font-bold">Rinterio</h1>
+               </div> 
+        </div>
+         </div>
+         <div class="p-5 bg-white border shadow-lg rounded-xl ">
+            <img class="w-full h-52" src="../B10-Assignment-03-main/assets/img5.png" alt="">
+         </div> 
+      
+       </div>
+   <div>
+ 
+ 
+  <!-- accordian -->
+
+   <div class="bg-work pb-20 pt-2 mt-10">
+     <!-- accordian heading -->
+  <div class="flex flex-col gap-3 justify-center items-center my-20">
+    <div class="flex w-40 gap-1 justify-center items-center p-1 rounded-xl shadow bg-green-50 text-xs ">
+        <i class="fa-solid fa-arrow-right"></i> 
+        <p class="">Explore our question</p>
+    </div>
+    <h1 class="text-3xl font-bold">Frequently Asked Questions</h1>
+    
+   </div>
+   <!-- main -->
+    <div class="w-8/12 mx-auto bg-white shadow-lg rounded-xl">
+        <div class="collapse collapse-plus ">
+            <input type="radio" name="my-accordion-3" checked="checked" />
+            <div class="collapse-title text-xl font-medium">1. How to book an appointment?
+            </div>
+            <div class="collapse-content">
+              <p>Press Book Appointment Button given in your consultant’s profile page. Choose the service you want and then it will show the available slots. Choose the slot you want and make payment. You will receive email confirmation from bookconsult.in. If not found in inbox, please check spam and promotions. If you still didn’t receive, please contact us by whatsapp text with the details. We will check the status and inform you.</p>
+            </div>
+          </div>
+          <div class="collapse collapse-plus ">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title text-xl font-medium">2. Will the Payments be secure?</div>
+            <div class="collapse-content">
+              <p>Payment part is fully taken care by Razorpay Payment Gateway and Stripe Payment Gateway. These are trustworthy gateways. Your payment data is processed in their websites. In case of any issues in the payment, you can contact their 24/7 customer care also.
+        
+                If you are worried about giving your card details in gateways, please use NetBanking via Razorpay Payment Gateway, you will not give any bank related details in the website of the Gateway. You will just choose the bank under NetBanking and go to your bank website only. Please check whether your bank website is secure with “https” in the URL, check for the spelling of your bank in the address bar and see whether it looks the same way it was before and make the payment.
+                
+                Moreover ours is a secure website with “https”. You can click on the lock symbol of the address bar and check the full details of our SSL Certificate which proves that the data you give in this site is encrypted and secure.
+                
+                For reference, you may take screenshots of the payment.</p>
+            </div>
+          </div>
+          <div class="collapse collapse-plus">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title text-xl font-medium">3. How to cancel/reschedule the session?</div>
+            <div class="collapse-content">
+              <p>Sorry, it is not possible for clients to cancel or reschedule the session. Please read our Cancellation & Refund Policy before you make the payment. No refund will be given if you do not attend the session.</p>
+            </div>
+          </div>
+          <div class="collapse collapse-plus ">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title text-xl font-medium">4. Payment is taken but appointment was not booked. What to be done?</div>
+            <div class="collapse-content">
+              <p>Do not worry! Just share details of your payment such as which payment gateway whether Stripe or Razorpay, amount deducted and time of the payment, we will get back with the status.</p>
+            </div>
+          </div>
+     </div>
+   </div>
+
+     <!-- explore more -->
+<div class="bg-background py-10 my-10">
+    <div class="flex flex-col gap-3 justify-center items-center my-20">
+        <div class="flex w-28 gap-1 justify-center items-center p-1 rounded-xl shadow bg-green-50 text-xs ">
+            <i class="fa-solid fa-arrow-right"></i> 
+            <p class="">Let’s Connect</p>
+        </div>
+        <h1 class="text-3xl font-bold">Let’s Discuss Next Project</h1>
+        <p class="text-center">The barn house captivates with its blend of rustic charm and modern sophistication, <br> featuring weathered wood, sleek metal accents.</p>
+       </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 w-8/12 mx-auto gap-7">
+        <input type="text" placeholder="First Name*" class="input input-bordered w-full " />
+        <input type="text" placeholder="Last Name*" class="input input-bordered w-full " />
+        <input type="text" placeholder="Phone number*" class="input input-bordered w-full " />
+        <input type="text" placeholder="Email adress*" class="input input-bordered w-full" />
+        <textarea class="textarea textarea-bordered lg:col-span-2" placeholder="Write your message here"></textarea>
+        <div class="flex gap-2 justify-center items-center p-2 bg-primary rounded-xl lg:col-span-2">
+            <h1 class="text-lg  font-bold ">Send Mail</h1>
+            <i class="fa-solid fa-arrow-right -rotate-45 bg-black text-white p-2 rounded-2xl"></i>
+        
+        </div>
+        
+    </div>
+    
+    
+
+</div>
+  </main>
+
+
+
+  <footer>
+<div class="flex flex-col gap-6 bg-black py-10">
+    <div class="flex gap-5 justify-center items-center">
+        <i class="fa-solid fa-arrow-right -rotate-45 bg-primary p-2 rounded-2xl"></i>
+        <h1 class="text-2xl text-white font-bold">Rinterio</h1>
+       </div> 
+       <p class="text-center text-white font-extralight">The barn house captivates with its blend of rustic charm and modern sophistication, <br> featuring weathered wood, sleek metal accents.</p>  
+       <ul class=" px-1 lg:flex items-center justify-center mx-auto gap-20 text-lg font-light text-white">
+        <li class="">
+            <a href="#">Home</a>
+        </li>
+        <li class="">
+            <a href="#">Everything</a>
+        </li>
+        <li class="">
+            <a href="#">Groceries</a>
+        </li>
+        <li class="">
+            <a href="#">About</a>
+        </li>
+        <li class="">
+            <a href="#">Contact</a>
+        </li>
+    </ul> 
+    <div class="flex gap-2 p-2 bg-primary rounded-xl w-40 justify-center items-center mx-auto">
+        <h1 class="  font-bold text-white">Book Consult</h1>
+        <i class="fa-solid fa-arrow-right -rotate-45 bg-black text-white p-2 rounded-2xl"></i>
+    
+    </div>
+</div>
+  </footer>
+</body>
+
+</html>
